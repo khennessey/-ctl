@@ -1,0 +1,32 @@
+Title: Georgia Indigency Calculator
+Author: Kevin Hennssey
+Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Georgia Indigency Calculator</h2>
+<p><b>This is a <a href="http://www.codingthelaw.org/">class project</a>. You should not rely on it as a source of legal information. It is likely incomplete.</b></p>
+<p>Answer the following questions to see if someone qualifies for appointment of counsel.</p>
+
+Q(1):Is the person charged with an offense punishable by imprisonment? 
+A:Yes
+	Q(1.1):Does the person earn more than $18,210 annually? 
+	A:Yes
+		Q(1.1.1):GOTO:1.2
+	A:No
+		Q(1.1.2):Is the person charged with a misdemeanor?
+		A:Yes
+			Q(1.1.2.1):GOTO:1.2
+		A:No
+			Q(1.1.2.2):Does person earn less than $18,210 per year?  
+			A:Yes
+				Q(1.1.2.2.1):Is there evidence that the person has other resources that might reasonably be used to employ a lawyer without undue hardship on the person, his or her dependents?
+				A:Yes
+					Q(1.1.2.2.1.1):GOTO:1.2
+				A:No
+	`				Q:The person is likely entitled to court appointed counsel.
+				
+			A:No
+				Q(1.1.2.2.2):GOTO:1.2
+			
+				
+A:No
+	Q(1.2):The person is not entitled to court appointed counsel
